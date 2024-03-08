@@ -26,7 +26,7 @@ public:
     }
 };
 
-// n | 1
+// discussion | n | 1
 // just compare the last seen couterpart, greedy
 class Solution {
 public:
