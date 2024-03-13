@@ -19,7 +19,7 @@ public:
                 }
             }
         }
-        map<string, multiset<string>> mp;
+        map<string, set<string>> mp;
         uf.buildGroupMap(mp);
 
         vector<vector<string>> res;
@@ -67,7 +67,7 @@ private:
                 return x;
             return find(parent[x]);
         }
-        void buildGroupMap(map<string, multiset<string>>& mp) {
+        void buildGroupMap(map<string, set<string>>& mp) {
             for (const auto& p : parent) {
                 auto root = find(p.first);
                 mp[root].insert(p.first);
