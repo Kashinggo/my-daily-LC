@@ -21,7 +21,10 @@ public:
 private:
     bool dfs(TreeNode *root, int &cnt) {
         if (!root) return true;
-        // if (dfs(root->left, cnt) && dfs(root->right, cnt)) // `&&` causes short circuit
+        
+        // `&&` causes short circuit
+        // if (dfs(root->left, cnt) && dfs(root->right, cnt)) 
+        
         bool c1 = dfs(root->left, cnt);
         bool c2 = dfs(root->right, cnt);
         if (c1 && c2) {
@@ -32,3 +35,5 @@ private:
         return false;
     }
 };
+
+// discussion, same
